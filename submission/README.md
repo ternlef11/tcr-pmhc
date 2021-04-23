@@ -1,4 +1,4 @@
-# Add-Your-Team-Name-Here
+# Illumina-ti
 
 Our team is from ... and we think proteins are cool 🙌
 
