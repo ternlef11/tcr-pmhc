@@ -2,6 +2,7 @@
 bak/
 *.npz
 data/train/
+data/validation/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

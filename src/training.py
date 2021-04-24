@@ -80,34 +80,8 @@ input_size = 420
 num_classes = 1
 learning_rate = 0.01
 
-class Net(nn.Module):
-    def __init__(self,  num_classes):
-        super(Net, self).__init__()       
-        self.conv1 = nn.Conv1d(in_channels=54, out_channels=100, kernel_size=3, stride=2, padding=1)
-        torch.nn.init.kaiming_uniform_(self.conv1.weight)
-        self.pool = nn.MaxPool1d(kernel_size=2, stride=2)
-        self.conv1_bn = nn.BatchNorm1d(100)
-        
-        self.conv2 = nn.Conv1d(in_channels=100, out_channels=100, kernel_size=3, stride=2, padding=1)
-        torch.nn.init.kaiming_uniform_(self.conv2.weight)
-        self.conv2_bn = nn.BatchNorm1d(100)
-        
-        self.fc1 = nn.Linear(2600, num_classes)
-        torch.nn.init.xavier_uniform_(self.fc1.weight)
-        
-    def forward(self, x):      
-        x = self.pool(F.relu(self.conv1(x)))
-        x = self.conv1_bn(x)
-        
-        x = self.pool(F.relu(self.conv2(x)))
-        x = self.conv2_bn(x)
-        
-        x = x.view(x.size(0), -1)
-        x = torch.sigmoid(self.fc1(x))
-        
-        return x
-    
 # Initialize network
+from model import Net
 net = Net(num_classes=num_classes).to(device)
 
 # Loss and optimizer
