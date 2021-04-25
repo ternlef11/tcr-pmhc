@@ -1,0 +1,38 @@
+;
+;	File 'topol.top' was generated
+;	By user: alirazzak (501)
+;	On host: Alis-MacBook-Pro.local
+;	At date: Sun Apr 25 13:17:55 2021
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                     :-) GROMACS - gmx pdb2gmx, 2021 (-:
+;	
+;	Executable:   /usr/local/bin/gromacs/bin/gmx
+;	Data prefix:  /usr/local/bin/gromacs
+;	Working dir:  /Users/alirazzak/Desktop/Code/bioinf_hackathon/mhc/tcr-pmhc/tcr-pmhc/the_pdbs
+;	Command line:
+;	  gmx pdb2gmx -chainsep id_or_ter -f 0.pdb -p topol.top
+;	Force field was read from the standard GROMACS share directory.
+;
+
+; Include forcefield parameters
+#include "charmm27.ff/forcefield.itp"
+
+; Include chain topologies
+#include "topol_Protein_chain_M.itp"
+#include "topol_Protein_chain_P.itp"
+#include "topol_Protein_chain_A.itp"
+#include "topol_Protein_chain_B.itp"
+
+[ system ]
+; Name
+Protein
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_M     1
+Protein_chain_P     1
+Protein_chain_A     1
+Protein_chain_B     1
