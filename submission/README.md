@@ -1,9 +1,9 @@
 # Illumina-ti
 
 We precipitate passion for Bioinformatics, sweat, tears & all the rest.
-Structtural Bioinformatics is where it's at & we're here to demonstrate that point.
+Structural Bioinformatics is where it's at & we're here to testify.
 
-Illumina-ti is one half Ali Razzak :nz: & the other half Natasha Singh :id:
+Illumina-ti is one half Ali Razzak (New Zealand) & the other half Natasha Singh (India).
 
 ### Project Description
 We are hell bent on producing the best model for the `tcr-pmhc` challenge.
